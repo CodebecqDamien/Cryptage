@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/workspaces/Cryptage/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/cryptage.dir/lire.cpp.o -c /workspaces/Cryptage/lire.cpp",
+  "file": "/workspaces/Cryptage/lire.cpp"
+}
+]
