@@ -11,7 +11,7 @@ int main(){
     cout << "Entrez une chaine de caractères de maximum 15 caractères (il servira de clé pour le déchiffrement) : ";
     cin >> motCle;
     srand(time(NULL));
-    int dec = 1;
+    int dec = 6;
     
     cout << dec << endl;
         ifstream fichier("crypter.txt", ios::in);  // on ouvre en le fichier non crypter en lecture seule
@@ -28,11 +28,14 @@ int main(){
                     && ligne[i] != '}' && ligne[i] != '-' && ligne[i] != '_' && ligne[i] != '+' && ligne[i] != '*' && ligne[i] != '/' && ligne[i] != '\\' 
                     && ligne[i] != '|' && ligne[i] != '&' && ligne[i] != '^' && ligne[i] != '%' && ligne[i] != '$' && ligne[i] != '#' && ligne[i] != '@' 
                     && ligne[i] != '!' && ligne[i] != '~' && ligne[i] != '`'){
-                        if(ligne[i] + dec < 97){
+                        if(ligne[i] - dec < 65 && ligne[i] >= 65 && ligne[i] > 90){
+                            ligne[i] = ligne[i] - dec + 26;
+                        }
+                        if(ligne[i] - dec < 97 && ligne[i] >90 ){
                             ligne[i] = ligne[i] - dec + 26;
                         }
                         else
-                        ligne[i] = ligne[i] - dec;
+                             ligne[i] = ligne[i] - dec;
                     }
                 }
                 cout << ligne << endl;
@@ -41,7 +44,7 @@ int main(){
                 fichier.close();  // on ferme le fichier
         }
         else  // sinon
-                cout << "Impossible d'ouvrir le fichier !" << endl;
+        cout << "Impossible d'ouvrir le fichier !" << endl;
  
         return 0;
 }
