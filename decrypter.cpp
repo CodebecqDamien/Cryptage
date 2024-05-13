@@ -5,16 +5,17 @@
  
 using namespace std;
 
- 
-int main(){
+int cle(){
     char motCle[15];       // mot clé pour le chiffrement
     cout << "Entrez votre mot clé pour le dechiffrement : ";
     cin >> motCle;
-    srand(time(NULL));
     int dec = 6;
-    
-    cout << dec << endl;
-        ifstream fichier("crypter.txt", ios::in);  // on ouvre en le fichier non crypter en lecture seule
+    return dec;
+}
+
+void decrypter(){
+    int dec = cle();
+    ifstream fichier("crypter.txt", ios::in);  // on ouvre en le fichier non crypter en lecture seule
         ofstream crypter("non-crypter.txt", ios::out);  // on ouvre en le fichier en lecture seule
         if(fichier){  // si l'ouverture a réussi 
 
@@ -45,6 +46,9 @@ int main(){
         }
         else  // sinon
         cout << "Impossible d'ouvrir le fichier !" << endl;
- 
-        return 0;
+}
+
+int main(){
+    decrypter();
+    return 0;
 }
