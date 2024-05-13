@@ -18,3 +18,10 @@ if(ligne[i] - dec < 65 && ligne[i] >= 65 && ligne[i] > 90){
                         }
                         else
                              ligne[i] = ligne[i] - dec;
+
+    char motCle[15];       // mot clé pour le chiffrement
+    cout << "Entrez une chaine de caractères de maximum 15 caractères (il servira de clé pour le déchiffrement) : ";
+    cin >> motCle;
+    srand(time(NULL));
+    int dec = 6;
+    cout << dec << endl;

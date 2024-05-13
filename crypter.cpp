@@ -31,6 +31,7 @@ int main(){
                         if(ligne[i] + dec > 122){
                             ligne[i] = ligne[i] + dec - 26;
                         }
+                        
                         else
                         ligne[i] = ligne[i] + dec;
                     }

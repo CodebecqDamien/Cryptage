@@ -8,7 +8,7 @@ using namespace std;
  
 int main(){
     char motCle[15];       // mot clé pour le chiffrement
-    cout << "Entrez une chaine de caractères de maximum 15 caractères (il servira de clé pour le déchiffrement) : ";
+    cout << "Entrez votre mot clé pour le dechiffrement : ";
     cin >> motCle;
     srand(time(NULL));
     int dec = 6;
