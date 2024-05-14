@@ -1,7 +1,7 @@
 [
 {
   "directory": "/workspaces/Cryptage/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/cryptage.dir/lire.cpp.o -c /workspaces/Cryptage/lire.cpp",
-  "file": "/workspaces/Cryptage/lire.cpp"
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/cryptage.dir/crypter.cpp.o -c /workspaces/Cryptage/crypter.cpp",
+  "file": "/workspaces/Cryptage/crypter.cpp"
 }
 ]

@@ -520,32 +520,32 @@ cryptage/fast:
 	$(MAKE) -f CMakeFiles/cryptage.dir/build.make CMakeFiles/cryptage.dir/build
 .PHONY : cryptage/fast
 
-lire.o: lire.cpp.o
+crypter.o: crypter.cpp.o
 
-.PHONY : lire.o
+.PHONY : crypter.o
 
 # target to build an object file
-lire.cpp.o:
-	$(MAKE) -f CMakeFiles/cryptage.dir/build.make CMakeFiles/cryptage.dir/lire.cpp.o
-.PHONY : lire.cpp.o
+crypter.cpp.o:
+	$(MAKE) -f CMakeFiles/cryptage.dir/build.make CMakeFiles/cryptage.dir/crypter.cpp.o
+.PHONY : crypter.cpp.o
 
-lire.i: lire.cpp.i
+crypter.i: crypter.cpp.i
 
-.PHONY : lire.i
+.PHONY : crypter.i
 
 # target to preprocess a source file
-lire.cpp.i:
-	$(MAKE) -f CMakeFiles/cryptage.dir/build.make CMakeFiles/cryptage.dir/lire.cpp.i
-.PHONY : lire.cpp.i
+crypter.cpp.i:
+	$(MAKE) -f CMakeFiles/cryptage.dir/build.make CMakeFiles/cryptage.dir/crypter.cpp.i
+.PHONY : crypter.cpp.i
 
-lire.s: lire.cpp.s
+crypter.s: crypter.cpp.s
 
-.PHONY : lire.s
+.PHONY : crypter.s
 
 # target to generate assembly for a file
-lire.cpp.s:
-	$(MAKE) -f CMakeFiles/cryptage.dir/build.make CMakeFiles/cryptage.dir/lire.cpp.s
-.PHONY : lire.cpp.s
+crypter.cpp.s:
+	$(MAKE) -f CMakeFiles/cryptage.dir/build.make CMakeFiles/cryptage.dir/crypter.cpp.s
+.PHONY : crypter.cpp.s
 
 # Help Target
 help:
@@ -587,9 +587,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... NightlyMemCheck"
 	@echo "... cryptage"
-	@echo "... lire.o"
-	@echo "... lire.i"
-	@echo "... lire.s"
+	@echo "... crypter.o"
+	@echo "... crypter.i"
+	@echo "... crypter.s"
 .PHONY : help
 
 

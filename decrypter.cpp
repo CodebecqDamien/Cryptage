@@ -4,15 +4,40 @@
 #include <time.h>
  
 using namespace std;
-
+/**
+ * fonction pour demander la clé de chiffrement
+ * verifier si le mot clé existe dans le fichier data.json
+*/
 int cle(){
     char motCle[15];       // mot clé pour le chiffrement
     cout << "Entrez votre mot clé pour le dechiffrement : ";
     cin >> motCle;
-    int dec = 6;
-    return dec;
+    ifstream dataFile("data.json", ios::in);  // Ouvir le fichier en lecture seule
+    if(dataFile){
+        string line;
+        bool found = false;
+        while (getline(dataFile, line)) {
+            if (line.find(motCle) != string::npos) {
+                found = true;
+                break;
+            }else{
+                
+            }
+        }
+        if (found) {
+            cout << "Mot clé trouvé dans le fichier !" << endl;
+        } else {
+            cout << "Mot clé non trouvé dans le fichier !" << endl;
+            exit(0);
+        }
+        dataFile.close();
+    }
+    else  // sinon
+        cout << "Impossible d'ouvrir le fichier !" << endl;
+
 }
 
+// fonction pour decrypter le fichier
 void decrypter(){
     int dec = cle();
     ifstream fichier("crypter.txt", ios::in);  // on ouvre en le fichier non crypter en lecture seule
@@ -48,6 +73,8 @@ void decrypter(){
         cout << "Impossible d'ouvrir le fichier !" << endl;
 }
 
+
+// fonction principale
 int main(){
     decrypter();
     return 0;
